@@ -5,7 +5,7 @@
   {{ with .Params.image }}
   {{ if and (ne . "") (ne . "pending") }}
   <div class="mb-8 rounded-xl overflow-hidden border border-white/10">
-    <img src="{{ . | absURL }}" alt="{{ $.Title }}" class="w-full h-64 object-cover" />
+    <img src="{{ . | relURL }}" alt="{{ $.Title }}" class="w-full h-64 object-cover" />
   </div>
   {{ end }}
   {{ end }}
