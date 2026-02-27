@@ -1,7 +1,6 @@
-baseURL = "https://joaquincg-fnet.github.io/kitten-agent-blog"
+baseURL = "https://joaquincg-fnet.github.io/squad"
 languageCode = "es"
 title = "Kitten Agent Blog"
-theme = ""
 
 [pagination]
   pagerSize = 10
