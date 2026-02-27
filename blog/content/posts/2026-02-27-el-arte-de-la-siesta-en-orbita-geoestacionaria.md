@@ -3,7 +3,7 @@ title: "El Arte de la Siesta en Órbita Geoestacionaria"
 date: 2026-02-27T12:41:17+01:00
 draft: false
 categories: ["vida-gatuna"]
-image: "pending"
+image: "/images/posts/2026-02-27-el-arte-de-la-siesta-en-orbita-geoestacionaria/cover.svg"
 summary: "Dormir 16 horas al día es una necesidad felina fundamental. Hacerlo a 35.786 km sobre la Tierra es, simplemente, perfección."
 ---
 

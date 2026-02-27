@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1024" width="1792" height="1024">
+  <defs>
+    <radialGradient id="space" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a0a1e"/>
+      <stop offset="100%" stop-color="#000005"/>
+    </radialGradient>
+    <radialGradient id="earth" cx="38%" cy="32%" r="55%">
+      <stop offset="0%" stop-color="#6eb5ff"/>
+      <stop offset="40%" stop-color="#2a7fff"/>
+      <stop offset="70%" stop-color="#1a5fcc"/>
+      <stop offset="100%" stop-color="#0d3a80"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe4a0" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffe4a0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur-soft">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur-glow">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <clipPath id="earth-clip">
+      <circle cx="320" cy="820" r="480"/>
+    </clipPath>
+  </defs>
+
+  <!-- Deep space background -->
+  <rect width="1792" height="1024" fill="url(#space)"/>
+
+  <!-- Stars -->
+  <g opacity="0.9">
+    <circle cx="100" cy="80" r="1.2" fill="white" opacity="0.8"/>
+    <circle cx="250" cy="40" r="0.8" fill="white" opacity="0.6"/>
+    <circle cx="420" cy="120" r="1.5" fill="white" opacity="0.9"/>
+    <circle cx="580" cy="60" r="0.9" fill="white" opacity="0.7"/>
+    <circle cx="720" cy="90" r="1.1" fill="white" opacity="0.8"/>
+    <circle cx="870" cy="30" r="0.7" fill="white" opacity="0.6"/>
+    <circle cx="1020" cy="100" r="1.3" fill="white" opacity="0.85"/>
+    <circle cx="1180" cy="55" r="1.0" fill="white" opacity="0.75"/>
+    <circle cx="1350" cy="130" r="1.6" fill="white" opacity="0.9"/>
+    <circle cx="1520" cy="70" r="0.8" fill="white" opacity="0.65"/>
+    <circle cx="1680" cy="110" r="1.2" fill="white" opacity="0.8"/>
+    <circle cx="160" cy="200" r="0.9" fill="white" opacity="0.7"/>
+    <circle cx="340" cy="260" r="1.4" fill="white" opacity="0.85"/>
+    <circle cx="660" cy="180" r="0.7" fill="white" opacity="0.6"/>
+    <circle cx="900" cy="220" r="1.1" fill="white" opacity="0.8"/>
+    <circle cx="1100" cy="190" r="0.8" fill="white" opacity="0.7"/>
+    <circle cx="1400" cy="240" r="1.3" fill="white" opacity="0.9"/>
+    <circle cx="1600" cy="200" r="0.6" fill="white" opacity="0.65"/>
+    <circle cx="1750" cy="280" r="1.0" fill="white" opacity="0.75"/>
+    <circle cx="50" cy="350" r="1.1" fill="white" opacity="0.8"/>
+    <circle cx="480" cy="320" r="0.9" fill="white" opacity="0.7"/>
+    <circle cx="800" cy="370" r="1.4" fill="white" opacity="0.85"/>
+    <circle cx="1250" cy="340" r="0.7" fill="white" opacity="0.6"/>
+    <circle cx="1700" cy="380" r="1.2" fill="white" opacity="0.8"/>
+    <!-- Twinkling stars with animation -->
+    <circle cx="200" cy="150" r="1.5" fill="#ffe4a0" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="3.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="750" cy="50" r="1.8" fill="#ffe4a0" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1300" cy="80" r="1.5" fill="#c8e0ff" opacity="0.85">
+      <animate attributeName="opacity" values="0.85;0.3;0.85" dur="4.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1600" cy="310" r="2.0" fill="white" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="1.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="440" cy="390" r="1.3" fill="#ffe4a0" opacity="0.75">
+      <animate attributeName="opacity" values="0.75;0.2;0.75" dur="3.7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Earth (partially visible at bottom-left) -->
+  <circle cx="320" cy="820" r="480" fill="url(#earth)"/>
+  <!-- Earth cloud wisps -->
+  <g clip-path="url(#earth-clip)" opacity="0.55">
+    <ellipse cx="180" cy="680" rx="140" ry="28" fill="white" transform="rotate(-15 180 680)"/>
+    <ellipse cx="400" cy="640" rx="110" ry="22" fill="white" transform="rotate(8 400 640)"/>
+    <ellipse cx="280" cy="750" rx="180" ry="26" fill="white" transform="rotate(-5 280 750)"/>
+    <ellipse cx="500" cy="700" rx="90" ry="18" fill="white" transform="rotate(12 500 700)"/>
+    <ellipse cx="150" cy="780" rx="100" ry="20" fill="white" transform="rotate(-20 150 780)"/>
+  </g>
+  <!-- Earth atmosphere glow -->
+  <circle cx="320" cy="820" r="490" fill="none" stroke="#6eb5ff" stroke-width="12" opacity="0.3" filter="url(#blur-soft)"/>
+
+  <!-- Sun glow (top-right) -->
+  <circle cx="1680" cy="120" r="200" fill="url(#glow)" filter="url(#blur-glow)"/>
+  <circle cx="1680" cy="120" r="60" fill="#fff9e0" opacity="0.25"/>
+
+  <!-- Sunlight ray coming through the observation window (golden rectangle) -->
+  <polygon points="1050,0 1280,0 1180,400 950,400" fill="#ffe4a0" opacity="0.07"/>
+
+  <!-- The Golden Rectangle (observation window light) -->
+  <rect x="950" y="310" width="230" height="155" rx="8" fill="#ffe4a0" opacity="0.13"/>
+  <rect x="950" y="310" width="230" height="155" rx="8" fill="none" stroke="#ffe4a0" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- === FLOATING CAT === -->
+  <g>
+    <!-- Gentle floating animation -->
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,-18; 0,0; 0,14; 0,0"
+      dur="7s" repeatCount="indefinite" additive="sum"/>
+    <!-- Slow rotation (weightless tumble) -->
+    <animateTransform attributeName="transform" type="rotate"
+      values="0 896 480; 6 896 480; 0 896 480; -5 896 480; 0 896 480"
+      dur="11s" repeatCount="indefinite" additive="sum"/>
+
+    <!-- Cat body -->
+    <ellipse cx="896" cy="530" rx="105" ry="80" fill="#d4a96a"/>
+    <!-- Cat tummy (lighter) -->
+    <ellipse cx="896" cy="545" rx="68" ry="52" fill="#f0d4a8" opacity="0.9"/>
+    <!-- Cat head -->
+    <circle cx="896" cy="420" r="88" fill="#d4a96a"/>
+    <!-- Cat ears -->
+    <polygon points="836,360 816,295 876,348" fill="#d4a96a"/>
+    <polygon points="956,360 976,295 916,348" fill="#d4a96a"/>
+    <!-- Ear inner -->
+    <polygon points="838,354 822,308 868,346" fill="#f0a0a0" opacity="0.8"/>
+    <polygon points="954,354 970,308 924,346" fill="#f0a0a0" opacity="0.8"/>
+    <!-- Face stripes -->
+    <line x1="856" y1="380" x2="826" y2="360" stroke="#b8905a" stroke-width="2.5" opacity="0.6"/>
+    <line x1="860" y1="390" x2="826" y2="378" stroke="#b8905a" stroke-width="2.5" opacity="0.6"/>
+    <line x1="936" y1="380" x2="966" y2="360" stroke="#b8905a" stroke-width="2.5" opacity="0.6"/>
+    <line x1="932" y1="390" x2="966" y2="378" stroke="#b8905a" stroke-width="2.5" opacity="0.6"/>
+    <!-- Closed eyes (sleeping) -->
+    <path d="M858 415 Q872 408 886 415" fill="none" stroke="#5a3a1a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M906 415 Q920 408 934 415" fill="none" stroke="#5a3a1a" stroke-width="3" stroke-linecap="round"/>
+    <!-- Nose -->
+    <ellipse cx="896" cy="432" rx="7" ry="5" fill="#d4607a"/>
+    <!-- Mouth -->
+    <path d="M889 437 Q896 444 903 437" fill="none" stroke="#5a3a1a" stroke-width="2" stroke-linecap="round"/>
+    <!-- Whiskers -->
+    <line x1="896" y1="432" x2="820" y2="420" stroke="#f0d4a8" stroke-width="1.8" opacity="0.9"/>
+    <line x1="896" y1="436" x2="818" y2="438" stroke="#f0d4a8" stroke-width="1.8" opacity="0.9"/>
+    <line x1="896" y1="432" x2="972" y2="420" stroke="#f0d4a8" stroke-width="1.8" opacity="0.9"/>
+    <line x1="896" y1="436" x2="974" y2="438" stroke="#f0d4a8" stroke-width="1.8" opacity="0.9"/>
+    <!-- Paws (tucked in, peaceful sleeping pose) -->
+    <ellipse cx="810" cy="575" rx="48" ry="30" fill="#d4a96a" transform="rotate(-20 810 575)"/>
+    <ellipse cx="982" cy="575" rx="48" ry="30" fill="#d4a96a" transform="rotate(20 982 575)"/>
+    <!-- Paw pads -->
+    <ellipse cx="800" cy="582" rx="10" ry="7" fill="#f0a0a0" transform="rotate(-20 800 582)" opacity="0.7"/>
+    <ellipse cx="978" cy="582" rx="10" ry="7" fill="#f0a0a0" transform="rotate(20 978 582)" opacity="0.7"/>
+    <!-- Tail curled around (floating freely) -->
+    <path d="M896 608 Q820 660 780 620 Q740 580 790 545 Q830 520 860 560" fill="none" stroke="#d4a96a" stroke-width="22" stroke-linecap="round"/>
+    <path d="M896 608 Q820 660 780 620 Q740 580 790 545 Q830 520 860 560" fill="none" stroke="#c49060" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+    <!-- Tail tip -->
+    <circle cx="860" cy="560" r="14" fill="#d4a96a"/>
+    <!-- ZZZ floating from the cat -->
+    <text x="990" y="370" font-family="Georgia, serif" font-size="32" font-weight="bold" fill="#ffe4a0" opacity="0.9">z</text>
+    <text x="1025" y="335" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="#ffe4a0" opacity="0.75">z</text>
+    <text x="1068" y="290" font-family="Georgia, serif" font-size="54" font-weight="bold" fill="#ffe4a0" opacity="0.6">z</text>
+    <!-- ZZZ animations -->
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,-6; 0,0" dur="3s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- Small floating dust particles (space debris aesthetic) -->
+  <g opacity="0.5">
+    <circle cx="700" cy="300" r="2" fill="#ffe4a0">
+      <animateMotion dur="12s" repeatCount="indefinite" path="M0,0 Q40,-20 80,10 Q120,30 80,60 Q40,80 0,0"/>
+    </circle>
+    <circle cx="1100" cy="550" r="1.5" fill="white">
+      <animateMotion dur="9s" repeatCount="indefinite" path="M0,0 Q-30,20 -60,5 Q-90,-15 -60,-35 Q-30,-50 0,0"/>
+    </circle>
+    <circle cx="750" cy="600" r="2.5" fill="#c8e0ff">
+      <animateMotion dur="15s" repeatCount="indefinite" path="M0,0 Q50,30 100,10 Q140,-20 100,-50 Q50,-70 0,0"/>
+    </circle>
+  </g>
+
+  <!-- Title text -->
+  <text x="896" y="780" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="bold"
+    fill="white" text-anchor="middle" opacity="0.95"
+    style="text-shadow: 0 2px 12px #000;">El Arte de la Siesta</text>
+  <text x="896" y="838" font-family="Georgia, 'Times New Roman', serif" font-size="34"
+    fill="#ffe4a0" text-anchor="middle" opacity="0.85">en Órbita Geoestacionaria</text>
+
+  <!-- Subtle vignette -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="60%" stop-color="transparent"/>
+    <stop offset="100%" stop-color="#000008" stop-opacity="0.7"/>
+  </radialGradient>
+  <rect width="1792" height="1024" fill="url(#vignette)"/>
+</svg>
